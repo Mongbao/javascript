@@ -1,0 +1,35 @@
+assert:將一條訊息寫入控制台，前提是表達結果是false
+      console.assert(document.getElemenById("demo"),"You have no element with 'demo'");
+clear:清空控制台，會在控制台寫入一條消息：”控制台已清除“
+      console.clear();
+count:將調用的次數寫入控制台，可添加控制台中的標籤，預設“default"
+      console.count("myLabel"); //顯示myLabel:1
+error:向控制台導入錯誤
+      console.error("you made a mistake");
+group:只是一個消息群組開始，用groupEnd結束
+      console.group();
+      console.log("Hello");
+      console.groupEnd();
+grouopCollapsed:指示折疊消息群組開始，groupEnd結束
+      console.groupCollapsed();
+      console.log("Hello");
+      console.groupEnd();
+info:向控制台寫入訊息
+      console.info("hello");
+log:向控制台寫入訊息
+      console.log("hello");
+table:在控制台寫入table
+      var car1 = { name : "Audi", model : "A4" }
+      var car2 = { name : "Volvo", model : "XC90" }
+      var car3 = { name : "Ford", model : "Fusion" }
+      console.table([car1, car2, car3]);
+time:在控制台中啟動計時器，用timeEnd結束
+      console.time("test1");
+      for (i = 0; i < 100000; i++) {
+        // some code
+      }
+      console.timeEnd("test1");
+＊trace：顯是跟蹤，並且展示代碼在某個點結束
+      console.trace();
+ warm:向控制台寫入警告
+      console.warm("This is a warning");
