@@ -1,0 +1,60 @@
+parse:解析字符串並返回javascript對象
+
+  語法：json.parse(string,function)
+  string:以json格式寫的字串符
+  reviver function:用於轉換結果的函數。為每個項目調用該函數。任何嵌套對象都在父對象之前進行轉換。
+                   如果此函數返回有效值，則將項目值替換為轉換後的值
+                   如果此函數返回undefined，則刪除該項目
+返回值：json對象會是數字
+* 把 "city" 值替换為大寫：*/
+var text = '{ "name":"Bill", "age":"19", "city":"Seattle"}';
+var obj = JSON.parse(text, function (key, value) {
+  if (key == "city") {
+    return value.toUpperCase();
+  } else {
+    return value;
+  }
+});
+
+document.getElementById("demo").innerHTML = obj.name + ", " + obj.city;
+
+解析從服務器收到的json:
+var xmlhttp = new XMLHttpRequest();
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {
+    var myObj = JSON.parse(this.responseText);
+    document.getElementById("demo").innerHTML = myObj.name;
+  }
+};
+xmlhttp.open("GET", "json_demo.txt", true);
+xmlhttp.send();
+
+========
+stringify:將javascript對象轉為字符串，將數據發到Ｗeb服務器時，數據必須是字符串
+  語法：JSON.stringify(obj,replacer,space)
+    obj:必需，要轉換為字串得值
+    replacer:可選，用於轉換結果的函數或數組
+             如果該參數是函數，則在序列化過程中，被序列化的值每個屬性都會經過該函數得轉換和處理
+             如果該參數為術組，則只有包含在這個數組中的屬性名才會被序列化到最後的JSON字串符串中
+             如果該參數為null或為提供，則對象所有的屬性都會被序列化
+    space:可選，字符串或數字值。指定縮進用的字符串，用於美化輸出
+          如果參數是數字，代表有多少空格。上限為10，該值下果小於1，則表示沒有空格
+          如果參數是字符串，當字符串長度超過10個字母，取其前10個字母，該字符串將被作為空格
+          如果該參數沒有提供或者為null，將沒有空格
+    返回值：A String
+    
+/* 把 "city" 值替换為大寫：*/
+var obj = { "name":"Bill", "age":"19", "city":"Seattle"};
+var text = JSON.stringify(obj, function (key, value) {
+  if (key == "city") {
+    return value.toUpperCase();
+  } else {
+    return value;
+  }
+});
+
+使用space參數：
+/* 為每个空格插入 10 个空格字符：*/
+var obj = { "name":"Bill", "age":"19", "city":"Seattle"};
+var text = JSON.stringify(obj, null, 10);
+    
