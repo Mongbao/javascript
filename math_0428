@@ -10,7 +10,21 @@ Math.SQRT2=1.4142135623730951        //返回2的平方根
 Ｍath.abs(x);                      //絕對值
 Ｍath.acos(x);                     //反餘弦值
 Ｍath.asin(x);                     //正弦值
-Math.
+Math.atan(x);                     //以介於-PI/2與PI/2弧度之間的數值來返回x的反正切值
+Math.atan2(y,x);                  //返回從x軸到點（x,y)的角度
+Math.ceil(x);                     //對數進行上捨入
+Math.cos(x);                      //返回數的余弦
+Math.exp(x);                      //返回Ex的指數
+Math.floor(x);                    //對x進行下捨入
+Math.log(x);                      //返回數的自然對數
+Math.max(x,y,z);                  //返回ax,y,z中的最高值
+Math.min(x,y,z);                  //返回x,y,z中的最低值
+Math.pow(x,y);                    //返回x的y次幂
+Math.random();                    //返回隨機數
+Math.round(x);                    //四捨五入
+Math.sin(x);                      //返回數的正弦
+Math.sqrt(x);                     //返回數的平方根
+Math.tan(x);                      //返回角的正切
 
 
 https://www.runoob.com/jsref/jsref-obj-math.html
