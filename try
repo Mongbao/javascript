@@ -1,0 +1,31 @@
+try and catch
+try{
+  ...     //異常的拋出
+}catch(e){
+  ...     //異常的拋出
+}finally{
+  ...     //結束處理
+}
+
+try：允許定義執行時錯誤測試的區塊
+catch：會捕捉到try中發生的錯誤，並執行程式處理
+finally：不論try和catch中是否發生異常都會執行
+
+throw：允許創建自定義的錯誤
+
+function myfunction(){
+  var message,x;
+  message = document.getElementById("message");
+  message.inerHTML = "";
+  x = document.getElementById("demo").value;
+  try {
+    if (x == "") throw "值為空“;
+    if (isNan(x)) throw "不是數字“;
+    x = Number(x);
+    if(x < 5) throw "太小“;
+    if(x > 10) throw "太大“;
+   }
+   catch(err){
+    message.innerHRML = "錯誤: " + err;
+   }
+ }
