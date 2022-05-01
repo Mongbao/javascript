@@ -1,3 +1,59 @@
+創建Data對象
+var d = new Data();
+var d = new Data(milliseconds);
+var d = new Data(dataString);
+var d = new Data(year, month, day, hours, minutes, second, milliseconds);
+
+Data對象屬性
+constructor:返回對創建此對象的Data函數的引用
+prototype:使你有能力向對象添加屬性和方法
+
+Data對象方法
+getData:從Date對象返回一個月中的某一天（1~31)
+getDay:從Date對象返回一週中的某一天（0~6)
+getFullYear():從Date對象以四位數字返回年份
+getHours():返回Date對象的小時（0~23)
+getMilliseconds():返回Date對象的毫秒（0~999)
+getMinutes():返回Date對象的分鐘（0~59)
+getMonth():返回Date對象的月份（0~11)
+getSeconds():返回Date對象的秒數(0~59）
+getTime():返回1970年1月1號至今的毫秒數
+getTimezoneOffset():返回本地時間與格林威治標準時間（GMT)的分鐘差
+getUTCDate():根據世界時從Date對象返回月中的一天（1~31)
+getUTCDay():根據世界時從Date對象返回週中的一天（1~6)
+getUTCFullYear():根據世界時從Date返回四位數的年份
+getUTCHours():根據世界時返回Date對象的小時（0~23)
+getUTCMilliseconds():根據世界時返回Date對象的毫秒（0~999)
+getUTCMinutes():根據世界時返回Date對象的分鐘（0~59)
+getUTCMonth():根據世界時從Date對象返回月份(0~11)
+getUTCSeconds():根據世界時從Date對象的秒鐘(0~59)
+parse():返回1970年1月1日午夜到指定日期（字串符）
+setDate():設置Date對象中月的某一天（1~31)
+setFullYear():設置Date對象中的年份（四位數字）
+setHours():設置Date對象中的小時（0~23)
+setMillseconds():設置Date對象中的毫秒（0~999)
+setMinutes():設置Date對象中的分鐘（0~59)
+setMonth():設置Date對象中的月份(0~11)
+setSeconds():設置Date對象中的秒鐘（0~59)
+setTime():setTime()方法以毫秒設置Date對象
+setUTCDate():根據世界時設置Date對象中月份的一天（1~31)
+setUTCFullYear():根據世界時設置Date對象中的年份（四位數字）
+setUTCHours():根據世界時設置Date對象中的小時（0~23)
+setUTCMillseconds():根據世界時設置Date對象中的毫秒(0~999)
+setUTCMinutes():根據世界時設置Date對象中的分鐘（0~59)
+setUTCMonth():根據世界時設置Date對象中的月份（0~11)
+setUTCSeconds():setUTCSeconds()方法用於根據世界(UTC)設置指定時間嘚秒字段
+toDateString():把Date對象的日期部分轉換為字串符
+toISOString():使用ISO標準返回字串符的日期格式
+toJSON():以JSON數據格式返回日期字串符
+toLocaleDateString():根據本地時間格式，把Date對象的日期部分轉為字串符
+toLocaleTimeString():根據本地時間格式，把Date對象的時間部分轉換為字串符
+toLocaleString():根據本地時間格式，把Date對象的日期部分轉換為字串符
+toString():把Date對象轉換為字符串
+toTimeString():把Date對象的時間部分轉換為字符串
+toUTCString():根據世界時，把Date對象轉為字符串
+UTC():根據世界時返回1970年1月1日到指定日期的毫秒數
+valueOf():返回Date對象的原始值
 
 
 https://www.runoob.com/jsref/jsref-obj-date.html
