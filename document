@@ -1,0 +1,34 @@
+HTML DOM節點
+在HTML DOM（Document Object Model)中，每一個元素都是節點
+  文檔是一個文檔節點
+  所有HTML元素都是元素節點
+  所有HTML屬性都是屬性節點
+  本文插入到HTML元素是本文節點
+  註釋是註釋節點
+  
+Document對象
+當瀏覽器載入HTML文檔，就會成為Document對象
+Document對象是HTML文檔節點
+Document對象使我們可以從腳本中對HTML頁面中的所有元素進行訪問
+
+Document對象屬性和方法
+document.activeElement:返回當前獲取焦點元素
+document.addEventListener():向文檔添加句柄
+document.adoptNode(node):從另一個文檔返回adapded節點到當前文檔
+document.anchors:返回對文檔中所有Anchor對象的引用
+document.baseURl:返回文檔的絕對基礎URl
+document.body:返回文檔的body元素
+document.close():關閉用document.open()方法打開的輸出流，並顯示選定的數據
+document.cookie:設置或返回與當前文檔有關的所有cookie
+document.createAttribute():創建一個屬性節點
+document.createComment():createComment()方法可創建註釋節點
+document.createDocumentFragment():創建空的DocumentFragment對象，
+                                  並返回此對象
+document.createElement():創建元素節點
+document.createTextNode():創建本文節點
+document.doctype:返回與文檔相關的文檔類型聲明（DTD)
+document.documentElement:返回文檔的根節點
+document.documentMode:返回用於通過瀏覽器渲染文檔的模式
+document.documentURl:設置或返回文檔位置
+document.domain:返回當前文檔的域名
+document.embeds:返回
